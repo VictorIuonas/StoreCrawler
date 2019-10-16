@@ -1,6 +1,6 @@
 from typing import Tuple
 
-from GitHubCrawler.spiders.entities import GitHubSearchPage, ResultPageType
+from StoreCrawlerApp.spiders.entities import GitHubSearchPage, ResultPageType
 
 
 class SearchResultLinkExtractorUseCase:

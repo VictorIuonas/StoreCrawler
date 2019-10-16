@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-from GitHubCrawler.spiders.entities import ResultPageType
+from StoreCrawlerApp.spiders.entities import ResultPageType
 
 config = {}
 

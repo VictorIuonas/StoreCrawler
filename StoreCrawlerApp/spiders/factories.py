@@ -1,5 +1,5 @@
-from GitHubCrawler.spiders.services import ConfigService, OutputUrlService
-from GitHubCrawler.spiders.use_cases import SearchResultLinkExtractorUseCase, SearchUrlGeneratorUseCase, \
+from StoreCrawlerApp.spiders.services import ConfigService, OutputUrlService
+from StoreCrawlerApp.spiders.use_cases import SearchResultLinkExtractorUseCase, SearchUrlGeneratorUseCase, \
     RedirectLinkExtractorUseCase
 
 

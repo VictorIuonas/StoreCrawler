@@ -3,8 +3,8 @@ import logging
 
 from scrapy import Request, Spider
 
-from GitHubCrawler.spiders.entities import ReposPage, ResultPageType, WikisPage, IssuesPage
-from GitHubCrawler.spiders.factories import build_git_search_result_extractor_use_case, build_search_url_generator, \
+from StoreCrawlerApp.spiders.entities import ReposPage, ResultPageType, WikisPage, IssuesPage
+from StoreCrawlerApp.spiders.factories import build_git_search_result_extractor_use_case, build_search_url_generator, \
     build_redirect_link_extractor_use_case
 
 logger = logging.getLogger(__name__)

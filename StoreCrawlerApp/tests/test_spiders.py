@@ -1,13 +1,13 @@
 import json
 from unittest.mock import MagicMock, patch, mock_open
 
-from GitHubCrawler.spiders.SearchRepo import SearchRepoSpider
+from StoreCrawlerApp.spiders.SearchRepo import SearchRepoSpider
 
 
 class TestSpiders:
 
-    @patch('GitHubCrawler.spiders.services.open')
-    @patch('GitHubCrawler.spiders.SearchRepo.Spider')
+    @patch('StoreCrawlerApp.spiders.services.open')
+    @patch('StoreCrawlerApp.spiders.SearchRepo.Spider')
     def test_spider_parses_repo_page_to_return_link_list(self, spider_base, open):
         scenario = self.Scenario(spider_base, open)
 
@@ -20,8 +20,8 @@ class TestSpiders:
         scenario.then_the_request_will_contain_the_input_keywords()
         scenario.then_the_result_will_contain_the_domain_repo_url_list()
 
-    @patch('GitHubCrawler.spiders.services.open')
-    @patch('GitHubCrawler.spiders.SearchRepo.Spider')
+    @patch('StoreCrawlerApp.spiders.services.open')
+    @patch('StoreCrawlerApp.spiders.SearchRepo.Spider')
     def test_spider_parses_wiki_page_to_return_link_list(self, spider_base, open):
         scenario = self.Scenario(spider_base, open)
 
@@ -39,8 +39,8 @@ class TestSpiders:
         scenario.when_parsing_the_wiki_search_result_page()
         scenario.then_the_result_will_contain_the_domain_wiki_url_list()
 
-    @patch('GitHubCrawler.spiders.services.open')
-    @patch('GitHubCrawler.spiders.SearchRepo.Spider')
+    @patch('StoreCrawlerApp.spiders.services.open')
+    @patch('StoreCrawlerApp.spiders.SearchRepo.Spider')
     def test_spider_parses_issues_page_to_return_issues_list(self, spider_base, open):
         scenario = self.Scenario(spider_base, open)
 
