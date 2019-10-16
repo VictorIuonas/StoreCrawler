@@ -1,0 +1,1 @@
+FLASK_APP=store_crawler_api.py
