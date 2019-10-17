@@ -1,10 +1,10 @@
 from flask import request
 
-from Api import app
+from Api import api
 
 
 
-@app.route('/product', methods=['GET', 'POST'])
+@api.route('/product', methods=['GET', 'POST'])
 def product():
     if request.method == 'GET':
         return 'Getting all products'
