@@ -9,4 +9,4 @@ api.config.from_object(Config)
 db = SQLAlchemy(api)
 migrate = Migrate(api, db)
 
-from Api import routes
+from Api import routes, db_models
