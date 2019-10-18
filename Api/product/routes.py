@@ -1,7 +1,7 @@
 from flask import request
 
 from Api import api
-from product.factories import build_get_products_use_case
+from product.factories import build_get_products_use_case, build_crawl_store_use_case
 from product.serializers import ProductSchema
 
 
@@ -13,4 +13,5 @@ def product():
         response_serializer = ProductSchema(many=True)
         return response_serializer.dumps(products)
     else:
-        return 'Creating a new product'
+        build_crawl_store_use_case().execute('random url')
+        return ''
